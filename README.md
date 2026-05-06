@@ -16,7 +16,7 @@ Hocanın istediği 10 farklı günde push kuralına uymak için şöyle bir plan
 
 * ~~**Gün 1:** Repo kurulumu, klasörlerin ayarlanması ve README/gitignore dosyalarının halledilmesi.~~
 
-* **Gün 2:** Hakkında sayfası içeriğinin ve medya öğelerinin hazırlanması.
+* ~~**Gün 2:** Hakkında sayfası içeriğinin ve medya öğelerinin hazırlanması.~~
 
 * **Gün 3:** Özgeçmiş sayfası kodlaması (header, section gibi semantik taglar kullanılacak).
 
@@ -28,7 +28,7 @@ Hocanın istediği 10 farklı günde push kuralına uymak için şöyle bir plan
 
 * **Gün 7:** İletişim sayfasındaki formun tüm elemanlarla beraber tasarlanması.
 
-* **Gün 8:** Form denetimlerinin hem düz JS hem de Vue.js/React ile kodlanması.
+* **Gün 8:** Form denetimlerinin kodlanması.
 
 * **Gün 9:** Login sayfası tasarımı ve PHP tarafındaki şifre kontrol mekanizması.
 
