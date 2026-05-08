@@ -20,7 +20,7 @@ Hocanın istediği 10 farklı günde push kuralına uymak için şöyle bir plan
 
 * ~~**Gün 3:** Özgeçmiş sayfası kodlaması (header, section gibi semantik taglar kullanılacak).~~
 
-* **Gün 4:** Şehrim sayfası ve içindeki 4 resimli slider yapısı.
+* ~~**Gün 4:** Şehrim sayfası iskeletinin oluşturulması ve tanıtım metinlerinin eklenmesi.~~
 
 * **Gün 5:** Mirasımız veya Takımımız bölümünün detaylandırılması.
 
