@@ -27,3 +27,8 @@ section h2 {
 .card {
     border-left: 4px solid #0d6efd;
 }
+/* Carousel fotoğraflarını sabitleme */
+.carousel-item img {
+    height: 500px; /* Tüm fotoğraflar 500px boyunda olacak */
+    object-fit: cover; /* Fotoğrafı sünnetmeden kutuya sığdırır, fazlasını kırpar */
+}
