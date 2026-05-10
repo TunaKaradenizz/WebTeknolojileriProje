@@ -22,14 +22,14 @@ Hocanın istediği 10 farklı günde push kuralına uymak için şöyle bir plan
 
 * ~~**Gün 4:** Şehrim sayfası iskeletinin oluşturulması ve tanıtım metinlerinin eklenmesi.~~
 
-* **Gün 5:** Mirasımız veya Takımımız bölümünün detaylandırılması.
+* ~~Gün 5: Mirasımız (Konuralp) ve Takımımız bölümlerinin detaylandırılması ve kodlanması.~~
 
-* **Gün 6:** Bir API servisinden veri çekip sitede gösterme işlemi.
+* ~~Gün 6: Login sayfası tasarımı, JavaScript ile (boş alan/mail formatı) denetimi ve PHP şifre kontrol mekanizmasının kurulması.~~
 
 * **Gün 7:** İletişim sayfasındaki formun tüm elemanlarla beraber tasarlanması.
 
 * **Gün 8:** Form denetimlerinin kodlanması.
 
-* **Gün 9:** Login sayfası tasarımı ve PHP tarafındaki şifre kontrol mekanizması.
+* **Gün 9:** Bir API servisinden (Film, Spor vb.) veri çekip sitede dinamik olarak gösterme işlemi.
 
 * **Gün 10:** Form verilerinin PHP ile ekrana yazdırılması, son kontroller ve hostinge yükleme.
