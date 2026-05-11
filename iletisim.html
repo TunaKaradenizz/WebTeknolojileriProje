@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Tuna Karadeniz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Tuna Karadeniz</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-success fw-bold px-4 text-white" href="login.php" style="border-radius: 20px;">Giriş Yap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow border-0">
+                    <div class="card-header bg-primary text-white p-4">
+                        <h2 class="mb-0">İletişim Formu</h2>
+                        <p class="mb-0 small">Lütfen tüm alanları eksiksiz doldurunuz.</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="contactForm" action="gonder.php" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Ad Soyad</label>
+                                    <input type="text" class="form-control" name="ad" placeholder="Adınız Soyadınız">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">E-posta</label>
+                                    <input type="email" class="form-control" name="email" placeholder="ornek@gmail.com">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Telefon Numarası</label>
+                                    <input type="tel" class="form-control" name="tel" placeholder="05xx xxx xx xx">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Bölüm / Meslek</label>
+                                    <input type="text" class="form-control" name="bolum" placeholder="Öğrenci/Bilgisayar Mühendisliği">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label fw-bold">Konu</label>
+                                    <input type="text" class="form-control" name="konu" placeholder="Mesajınızın konusu">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="dosya" class="form-label fw-bold">Ek Dosya / Özgeçmiş (Opsiyonel)</label>
+                                    <input type="file" class="form-control shadow-sm" id="dosya" name="dosya">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Şehir</label>
+                                    <select class="form-select" name="sehir">
+                                        <option selected disabled>Seçiniz...</option>
+                                        <option value="Adana">Adana</option>
+                                        <option value="Adıyaman">Adıyaman</option>
+                                        <option value="Afyonkarahisar">Afyonkarahisar</option>
+                                        <option value="Ağrı">Ağrı</option>
+                                        <option value="Amasya">Amasya</option>
+                                        <option value="Ankara">Ankara</option>
+                                        <option value="Antalya">Antalya</option>
+                                        <option value="Artvin">Artvin</option>
+                                        <option value="Aydın">Aydın</option>
+                                        <option value="Balıkesir">Balıkesir</option>
+                                        <option value="Bilecik">Bilecik</option>
+                                        <option value="Bingöl">Bingöl</option>
+                                        <option value="Bitlis">Bitlis</option>
+                                        <option value="Bolu">Bolu</option>
+                                        <option value="Burdur">Burdur</option>
+                                        <option value="Bursa">Bursa</option>
+                                        <option value="Çanakkale">Çanakkale</option>
+                                        <option value="Çankırı">Çankırı</option>
+                                        <option value="Çorum">Çorum</option>
+                                        <option value="Denizli">Denizli</option>
+                                        <option value="Diyarbakır">Diyarbakır</option>
+                                        <option value="Edirne">Edirne</option>
+                                        <option value="Elazığ">Elazığ</option>
+                                        <option value="Erzincan">Erzincan</option>
+                                        <option value="Erzurum">Erzurum</option>
+                                        <option value="Eskişehir">Eskişehir</option>
+                                        <option value="Gaziantep">Gaziantep</option>
+                                        <option value="Giresun">Giresun</option>
+                                        <option value="Gümüşhane">Gümüşhane</option>
+                                        <option value="Hakkari">Hakkari</option>
+                                        <option value="Hatay">Hatay</option>
+                                        <option value="Isparta">Isparta</option>
+                                        <option value="Mersin">Mersin</option>
+                                        <option value="İstanbul">İstanbul</option>
+                                        <option value="İzmir">İzmir</option>
+                                        <option value="Kars">Kars</option>
+                                        <option value="Kastamonu">Kastamonu</option>
+                                        <option value="Kayseri">Kayseri</option>
+                                        <option value="Kırklareli">Kırklareli</option>
+                                        <option value="Kırşehir">Kırşehir</option>
+                                        <option value="Kocaeli">Kocaeli</option>
+                                        <option value="Konya">Konya</option>
+                                        <option value="Kütahya">Kütahya</option>
+                                        <option value="Malatya">Malatya</option>
+                                        <option value="Manisa">Manisa</option>
+                                        <option value="Kahramanmaraş">Kahramanmaraş</option>
+                                        <option value="Mardin">Mardin</option>
+                                        <option value="Muğla">Muğla</option>
+                                        <option value="Muş">Muş</option>
+                                        <option value="Nevşehir">Nevşehir</option>
+                                        <option value="Niğde">Niğde</option>
+                                        <option value="Ordu">Ordu</option>
+                                        <option value="Rize">Rize</option>
+                                        <option value="Sakarya">Sakarya</option>
+                                        <option value="Samsun">Samsun</option>
+                                        <option value="Siirt">Siirt</option>
+                                        <option value="Sinop">Sinop</option>
+                                        <option value="Sivas">Sivas</option>
+                                        <option value="Tekirdağ">Tekirdağ</option>
+                                        <option value="Tokat">Tokat</option>
+                                        <option value="Trabzon">Trabzon</option>
+                                        <option value="Tunceli">Tunceli</option>
+                                        <option value="Şanlıurfa">Şanlıurfa</option>
+                                        <option value="Uşak">Uşak</option>
+                                        <option value="Van">Van</option>
+                                        <option value="Yozgat">Yozgat</option>
+                                        <option value="Zonguldak">Zonguldak</option>
+                                        <option value="Aksaray">Aksaray</option>
+                                        <option value="Bayburt">Bayburt</option>
+                                        <option value="Karaman">Karaman</option>
+                                        <option value="Kırıkkale">Kırıkkale</option>
+                                        <option value="Batman">Batman</option>
+                                        <option value="Şırnak">Şırnak</option>
+                                        <option value="Bartın">Bartın</option>
+                                        <option value="Ardahan">Ardahan</option>
+                                        <option value="Iğdır">Iğdır</option>
+                                        <option value="Yalova">Yalova</option>
+                                        <option value="Karabük">Karabük</option>
+                                        <option value="Kilis">Kilis</option>
+                                        <option value="Osmaniye">Osmaniye</option>
+                                        <option value="Düzce">Düzce</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Cinsiyet</label>
+                                    <div class="mt-2">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cinsiyet" value="Erkek">
+                                            <label class="form-check-label">Erkek</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="cinsiyet" value="Kadın">
+                                            <label class="form-check-label">Kadın</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label fw-bold">Mesajınız</label>
+                                    <textarea class="form-control" name="mesaj" rows="4" placeholder="Bize bir şeyler yazın..."></textarea>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="kvkk" id="kvkk">
+                                        <label class="form-check-label small" for="kvkk">
+                                            Kişisel verilerimin işlenmesini kabul ediyorum.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-primary w-100 fw-bold py-2">Gönder</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="reset" class="btn btn-outline-danger w-100 fw-bold py-2" onclick="return confirm('Tüm formu temizlemek istediğinize emin misiniz?')">Temizle</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p class="mb-0">&copy; 2026 Tuna Karadeniz - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>

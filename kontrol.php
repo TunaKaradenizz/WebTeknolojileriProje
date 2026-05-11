@@ -13,11 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: login.php?hata=empty");
         exit();
     } elseif ($gelen_email == $dogru_email && $gelen_sifre == $dogru_no) {
-        // Başarılı girişte Hoşgeldiniz mesajı [cite: 19, 25]
+        // Başarılı girişte Hoşgeldiniz mesajı gösteren sayfaya yönlendirir
         header("Location: hosgeldiniz.php?no=" . $dogru_no);
         exit();
     } else {
-        // Hatalı girişte login.php'ye geri gönderir [cite: 19, 25]
+        // Hatalı girişte login.php'ye geri gönderir 
         header("Location: login.php?hata=hatali");
         exit();
     }

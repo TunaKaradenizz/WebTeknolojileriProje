@@ -67,7 +67,7 @@
                 return false; // Formu gönderme
             }
 
-            return true; // Her şey tamamsa kontrol.php'ye gider [cite: 19]
+            return true; // Her şey tamamsa kontrol.php'ye gider 
         }
     </script>
 </body>

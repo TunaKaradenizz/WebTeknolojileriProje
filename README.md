@@ -26,7 +26,7 @@ Hocanın istediği 10 farklı günde push kuralına uymak için şöyle bir plan
 
 * ~~Gün 6: Login sayfası tasarımı, JavaScript ile (boş alan/mail formatı) denetimi ve PHP şifre kontrol mekanizmasının kurulması.~~
 
-* **Gün 7:** İletişim sayfasındaki formun tüm elemanlarla beraber tasarlanması.
+* ~~Gün 7: İletişim sayfasındaki formun tüm elemanlarla beraber tasarlanması.~~
 
 * **Gün 8:** Form denetimlerinin kodlanması.
 
