@@ -6,6 +6,7 @@
     <title>İletişim | Tuna Karadeniz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body class="bg-light">
 
@@ -36,31 +37,24 @@
                         <p class="mb-0 small">Lütfen tüm alanları eksiksiz doldurunuz.</p>
                     </div>
                     <div class="card-body p-4">
+                        <div id="app">
                         <form id="contactForm" action="gonder.php" method="POST">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">Ad Soyad</label>
-                                    <input type="text" class="form-control" name="ad" placeholder="Adınız Soyadınız">
+                                    <input type="text" class="form-control" name="ad" v-model="ad" placeholder="Adınız Soyadınız">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">E-posta</label>
-                                    <input type="email" class="form-control" name="email" placeholder="ornek@gmail.com">
+                                    <input type="email" class="form-control" name="email" v-model="email" placeholder="ornek@gmail.com">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">Telefon Numarası</label>
-                                    <input type="tel" class="form-control" name="tel" placeholder="05xx xxx xx xx">
+                                    <input type="tel" class="form-control" name="tel" v-model="tel" placeholder="05xx xxx xx xx">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">Bölüm / Meslek</label>
-                                    <input type="text" class="form-control" name="bolum" placeholder="Öğrenci/Bilgisayar Mühendisliği">
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="form-label fw-bold">Konu</label>
-                                    <input type="text" class="form-control" name="konu" placeholder="Mesajınızın konusu">
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="dosya" class="form-label fw-bold">Ek Dosya / Özgeçmiş (Opsiyonel)</label>
-                                    <input type="file" class="form-control shadow-sm" id="dosya" name="dosya">
+                                    <input type="text" class="form-control" name="bolum" v-model="bolum" placeholder="Öğrenci/Bilgisayar Mühendisliği">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">Şehir</label>
@@ -163,25 +157,39 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
+                                    <label class="form-label fw-bold">Konu</label>
+                                    <input type="text" class="form-control" name="konu" v-model="konu" placeholder="Mesajınızın konusu">
+                                </div>
+                                <div class="col-md-12">
                                     <label class="form-label fw-bold">Mesajınız</label>
-                                    <textarea class="form-control" name="mesaj" rows="4" placeholder="Bize bir şeyler yazın..."></textarea>
+                                    <textarea class="form-control" name="mesaj" v-model="mesaj" rows="4" placeholder="Bize bir şeyler yazın..."></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="dosya" class="form-label fw-bold">Ek Dosya / Özgeçmiş (Opsiyonel)</label>
+                                    <input type="file" class="form-control shadow-sm" id="dosya" name="dosya">
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="kvkk" id="kvkk">
+                                        <input class="form-check-input" type="checkbox" name="kvkk" id="kvkk" v-model="kvkk">
                                         <label class="form-check-label small" for="kvkk">
                                             Kişisel verilerimin işlenmesini kabul ediyorum.
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <button type="submit" class="btn btn-primary w-100 fw-bold py-2">Gönder</button>
+                                <div class="col-md-4">
+                                    <button type="button" onclick="nativeKontrol()" class="btn btn-secondary w-100 fw-bold py-2">Gönder (Native JS)</button>
                                 </div>
-                                <div class="col-md-6">
+
+                                <div class="col-md-4">
+                                    <button type="button" @click="vueKontrol" class="btn btn-primary w-100 fw-bold py-2">Gönder (Vue.js)</button>
+                                </div>
+
+                                <div class="col-md-4">
                                     <button type="reset" class="btn btn-outline-danger w-100 fw-bold py-2" onclick="return confirm('Tüm formu temizlemek istediğinize emin misiniz?')">Temizle</button>
                                 </div>
                             </div>
                         </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,6 +199,69 @@
     <footer class="bg-dark text-white text-center py-3 mt-auto">
         <p class="mb-0">&copy; 2026 Tuna Karadeniz - Tüm Hakları Saklıdır.</p>
     </footer>
+
+    <script>
+        // --- VUE.JS DENETİMİ (Modern Yöntem) ---
+        const { createApp } = Vue
+        createApp({
+            data() {
+                return {
+                    ad: '',
+                    email: '',
+                    tel: '',
+                    bolum: '',
+                    konu: '',
+                    mesaj: '',
+                    kvkk: false
+                }
+            },
+            methods: {
+                vueKontrol() {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    const telRegex = /^[0-9]+$/;
+
+                    if (!this.ad || !this.email || !this.konu || !this.mesaj) {
+                        alert("HATA (Vue.js): Lütfen tüm zorunlu alanları doldurun!");
+                    } else if (!emailRegex.test(this.email)) {
+                        alert("HATA (Vue.js): E-posta formatı geçersiz!");
+                    } else if (!this.tel || !telRegex.test(this.tel)) {
+                        alert("HATA (Vue.js): Telefon sadece rakam olmalı ve boş bırakılamaz!");
+                    } else if (!this.kvkk) {
+                        alert("HATA (Vue.js): KVKK onayını işaretlemelisiniz!");
+                    } else {
+                        alert("BAŞARILI (Vue.js): Tüm denetimler geçti. Form gönderilmeye hazır!");
+                        
+                    }
+                }
+            }
+        }).mount('#app')
+
+        // --- NATIVE JS DENETİMİ (Klasik Yöntem) ---
+        function nativeKontrol() {
+            // DOM üzerinden tüm değerleri çekiyoruz
+            const ad = document.getElementsByName("ad")[0].value;
+            const email = document.getElementsByName("email")[0].value;
+            const tel = document.getElementsByName("tel")[0].value;
+            const konu = document.getElementsByName("konu")[0].value;
+            const mesaj = document.getElementsByName("mesaj")[0].value;
+            const kvkk = document.getElementsByName("kvkk")[0].checked;
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const telRegex = /^[0-9]+$/;
+
+            if (ad === "" || email === "" || konu === "" || mesaj === "") {
+                alert("HATA (Native JS): Tüm alanları doldurmak zorunludur!");
+            } else if (!emailRegex.test(email)) {
+                alert("HATA (Native JS): E-posta adresi hatalı!");
+            } else if (tel === "" || !telRegex.test(tel)) {
+                alert("HATA (Native JS): Telefon alanı sadece rakam içermelidir!");
+            } else if (!kvkk) {
+                alert("HATA (Native JS): Formu göndermek için KVKK onayını kabul etmelisiniz!");
+            } else {
+                alert("BAŞARILI (Native JS): Saf JavaScript denetimi başarıyla tamamlandı!");
+            }
+        }
+    </script>
 
 </body>
 </html>
