@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -10,23 +11,7 @@
 </head>
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Tuna Karadeniz</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-success fw-bold px-4 text-white" href="login.php" style="border-radius: 20px;">Giriş Yap</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include 'navbar.php'; ?>
 
     <div class="container my-5">
         <div class="row justify-content-center">
@@ -229,10 +214,10 @@
                     } else if (!this.kvkk) {
                         alert("HATA (Vue.js): KVKK onayını işaretlemelisiniz!");
                     } else {
-                        alert("BAŞARILI (Vue.js): Tüm denetimler geçti. Form gönderilmeye hazır!");
-                        
+                        alert("BAŞARILI (Vue.js): Form doğrulanıyor ve gönderiliyor...");
+                        document.getElementById("contactForm").submit(); 
                     }
-                }
+                    }
             }
         }).mount('#app')
 
@@ -258,7 +243,8 @@
             } else if (!kvkk) {
                 alert("HATA (Native JS): Formu göndermek için KVKK onayını kabul etmelisiniz!");
             } else {
-                alert("BAŞARILI (Native JS): Saf JavaScript denetimi başarıyla tamamlandı!");
+                alert("BAŞARILI (Native JS): Form doğrulanıyor ve gönderiliyor...");
+                document.getElementById("contactForm").submit(); 
             }
         }
     </script>

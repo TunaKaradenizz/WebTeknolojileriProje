@@ -1,25 +1,26 @@
 <?php
-// kontrol.php dosyası
-
-$dogru_no = "b241210019"; 
-$dogru_email = $dogru_no . "@sakarya.edu.tr"; 
+session_start(); // 1. Bileklik kutusunu açtık
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $gelen_email = $_POST['email'];
-    $gelen_sifre = $_POST['password'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    if (empty($gelen_email) || empty($gelen_sifre)) {
-        // Hata durumunda login.php'ye (formun yeni adı) geri gönderir
-        header("Location: login.php?hata=empty");
-        exit();
-    } elseif ($gelen_email == $dogru_email && $gelen_sifre == $dogru_no) {
-        // Başarılı girişte Hoşgeldiniz mesajı gösteren sayfaya yönlendirir
-        header("Location: hosgeldiniz.php?no=" . $dogru_no);
+    // Ödev kuralı: Mail b241210019@sakarya.edu.tr, Şifre b241210019 ise
+    // (Buradaki numarayı kendi numaranla güncelle)
+    if ($email == "b241210019@sakarya.edu.tr" && $password == "b241210019") {
+        
+        $_SESSION['user'] = "b241210019"; // 2. BİLEKLİĞİ TAKTIK!
+        
+        // 3. Şart olan "Hoş Geldiniz" sayfasına gönderiyoruz
+        header("Location: hosgeldiniz.php");
         exit();
     } else {
-        // Hatalı girişte login.php'ye geri gönderir 
+        // Hatalıysa login.php'ye hata mesajıyla geri gönder
         header("Location: login.php?hata=hatali");
         exit();
     }
+} else {
+    header("Location: login.php");
+    exit();
 }
 ?>

@@ -28,8 +28,10 @@ Hocanın istediği 10 farklı günde push kuralına uymak için şöyle bir plan
 
 * ~~Gün 7: İletişim sayfasındaki formun tüm elemanlarla beraber tasarlanması.~~
 
-~~Gün 8: Form denetimlerinin hem Native JS hem de Vue.js ile kodlanması.~~
+* ~~Gün 8: Form denetimlerinin hem Native JS hem de Vue.js ile kodlanması.~~
 
-* **Gün 9:** Bir API servisinden (Film, Spor vb.) veri çekip sitede dinamik olarak gösterme işlemi.
+* **Gün 9:** Formların gönderilmesi için yazılması gereken kod yazıldı ayrıca login yaptıktan sonra giriş yapmış olmaya devam etmek için tüm proje dinemik bi php yapısına dönüştürüldü navbar.php ile kodda tasarruf sağladım.
 
-* **Gün 10:** Form verilerinin PHP ile ekrana yazdırılması, son kontroller ve hostinge yükleme.
+* **Gün 10:** Bir API servisinden (Film, Spor vb.) veri çekip sitede dinamik olarak gösterme işlemi.
+
+* **Gün 11:** Form verilerinin PHP ile ekrana yazdırılması, son kontroller ve hostinge yükleme.

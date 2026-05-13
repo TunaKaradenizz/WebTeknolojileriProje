@@ -67,6 +67,7 @@
                 return false; // Formu gönderme
             }
 
+            $_SESSION['user'] = "b241210019"; // Giriş başarılıysa oturum başlat ve kullanıcı adını sakla
             return true; // Her şey tamamsa kontrol.php'ye gider 
         }
     </script>

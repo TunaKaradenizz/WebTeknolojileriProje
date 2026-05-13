@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -9,25 +12,7 @@
 </head>
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Tuna Karadeniz</a>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Hakkında</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-                        <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
-                        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                        <li class="nav-item ms-lg-3">
-                            <a class="btn btn-success fw-bold px-4 text-white" href="login.php" style="border-radius: 20px;">Giriş Yap</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php include 'navbar.php'; ?>
 
     <main class="container mt-5">
     <section id="hakkinda" class="mb-5">
