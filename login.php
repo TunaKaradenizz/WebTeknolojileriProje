@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -52,14 +53,14 @@
             errorBox.classList.add("d-none");
             errorBox.innerHTML = "";
 
-            // 1. Boş mu kontrolü [cite: 16, 24]
+            // 1. Boş mu kontrolü 
             if (email.trim() === "" || password.trim() === "") {
                 errorBox.innerHTML = "E-posta ve şifre alanları boş bırakılamaz!";
                 errorBox.classList.remove("d-none"); // Kutuyu göster
                 return false; // Formu gönderme
             }
 
-            // 2. Mail formatı kontrolü [cite: 16, 24]
+            // 2. Mail formatı kontrolü 
             var emailPattern = /^[a-zA-Z0-9._-]+@sakarya\.edu\.tr$/;
             if (!emailPattern.test(email)) {
                 errorBox.innerHTML = "Lütfen geçerli bir Sakarya Üniversitesi mail adresi giriniz!";
@@ -67,7 +68,6 @@
                 return false; // Formu gönderme
             }
 
-            $_SESSION['user'] = "b241210019"; // Giriş başarılıysa oturum başlat ve kullanıcı adını sakla
             return true; // Her şey tamamsa kontrol.php'ye gider 
         }
     </script>

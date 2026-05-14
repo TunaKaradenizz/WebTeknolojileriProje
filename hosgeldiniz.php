@@ -1,7 +1,7 @@
 <?php
-session_start(); // 1. Oturumu burada da açıyoruz ki login'den gelen veriyi görelim
+session_start();
 if (!isset($_SESSION['user'])) {
-    header("Location: login.php"); // Giriş yapmadan gelmeye çalışırsa kov!
+    header("Location: login.php");
     exit();
 }
 ?>

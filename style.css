@@ -32,3 +32,78 @@ section h2 {
     height: 500px; /* Tüm fotoğraflar 500px boyunda olacak */
     object-fit: cover; /* Fotoğrafı sünnetmeden kutuya sığdırır, fazlasını kırpar */
 }
+.navbar-nav .nav-link.active {
+    color: #ffc107 !important; /* Aktif olan linki sarı yapar (Örn: Bootstrap Warning rengi) */
+    border-bottom: 2px solid #ffc107; /* Altına bir çizgi çeker */
+}
+
+/* Mobilde resim boyunu biraz küçültelim ki ekranı kaplamasın */
+@media (max-width: 768px) {
+    #duzceCarousel .carousel-item img {
+        height: 300px;
+    }
+}
+/* Carousel Resimlerini Sabitleme */
+#duzceCarousel .carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Gezilecek Yerler Kutu Efekti */
+.feature-box {
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.feature-box:hover {
+    background-color: #ffffff;
+    transform: translateY(-5px); /* Yukarı kalkma efekti */
+    border-color: #0d6efd !important; /* Mavi çerçeve */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Sayfa altındaki footer'ın içeriği kapatmaması için */
+footer {
+    margin-top: 50px;
+}
+#sehir-kunye .card {
+    transition: transform 0.3s ease;
+}
+
+#sehir-kunye .bg-white {
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+#sehir-kunye .bi {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Alt taraftaki küçük görsellerin boyutu */
+.sehir-mini-img {
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Kartların üzerine gelince hafifçe yükselmesi */
+.destination-card {
+    transition: all 0.3s ease;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.destination-card .card-body {
+    padding: 1.2rem;
+}
+
+.destination-card .badge {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
