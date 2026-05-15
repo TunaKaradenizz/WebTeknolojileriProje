@@ -62,8 +62,8 @@
         </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3 mt-auto fixed-bottom">
-        <p class="mb-0">&copy; 2026 Tuna Karadeniz - Tüm Hakları Saklıdır.</p>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2026 Tuna Karadeniz | Mesaj Alındı Sayfası</p>
     </footer>
 
 </body>

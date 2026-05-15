@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
@@ -15,12 +16,16 @@
        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="index.php">Tuna Karadeniz</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.php">Hakkında</a></li>
                         <li class="nav-item"><a class="nav-link" href="ozgecmis.php">Özgeçmiş</a></li>
                         <li class="nav-item"><a class="nav-link active" href="sehrim.php">Şehrim</a></li>
                         <li class="nav-item"><a class="nav-link" href="mirasimiz.php">Mirasımız</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ilgi_alanlarim.php">İlgi Alanlarım</a></li>
                         <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
                         <li class="nav-item d-flex align-items-center ms-lg-3">
                             <?php if (isset($_SESSION['user'])): ?>
@@ -108,16 +113,27 @@
         <div id="duzceCarousel" class="carousel slide mb-5 shadow rounded overflow-hidden" data-bs-ride="carousel">
             <div class="carousel-inner"> 
                 <div class="carousel-item active">
-                    <img src="fotoğraflar/düzce_1.webp" class="d-block w-100" alt="Efteni Gölü">
+                    <a href="https://tr.wikipedia.org/wiki/Efteni_G%C3%B6l%C3%BC" target="_blank">
+                        <img src="fotoğraflar/düzce_1.webp" class="d-block w-100" alt="Efteni Gölü">
+                    </a>
                 </div>
+
                 <div class="carousel-item">
-                    <img src="fotoğraflar/düzce_2.webp" class="d-block w-100" alt="Akçakoca Limanı">
+                    <a href="https://tr.wikipedia.org/wiki/Ak%C3%A7akoca" target="_blank">
+                        <img src="fotoğraflar/düzce_2.webp" class="d-block w-100" alt="Akçakoca Limanı">
+                    </a>
                 </div>
+
                 <div class="carousel-item">
-                    <img src="fotoğraflar/düzce_3.webp" class="d-block w-100" alt="Güzeldere Şelalesi">
+                    <a href="https://tr.wikipedia.org/wiki/G%C3%BCzeldere_%C5%9Eelalesi" target="_blank">
+                        <img src="fotoğraflar/düzce_3.webp" class="d-block w-100" alt="Güzeldere Şelalesi">
+                    </a>
                 </div>
+
                 <div class="carousel-item">
-                    <img src="fotoğraflar/düzce_4.jpg" class="d-block w-100" alt="Kardüz Yaylası">
+                    <a href="https://tr.wikipedia.org/wiki/Prusias_Ad_Hypium" target="_blank">
+                        <img src="fotoğraflar/konuralp_antik_kenti.png" class="d-block w-100" alt="Kardüz Yaylası">
+                    </a>
                 </div>
             </div>
             
@@ -128,7 +144,6 @@
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
-
         <section id="gezilecek-yerler" class="mt-5 mb-5">
             <div class="d-flex align-items-center mb-4">
                 <h2 class="fw-bold mb-0 text-primary">🏞️ Düzce'nin İncileri</h2>

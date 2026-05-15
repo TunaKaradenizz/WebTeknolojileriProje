@@ -9,18 +9,23 @@ session_start();
     <title>Hakkında | Tuna Karadeniz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.php">Tuna Karadeniz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.php">Hakkında</a></li>
                     <li class="nav-item"><a class="nav-link" href="ozgecmis.php">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="sehrim.php">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="mirasimiz.php">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgi_alanlarim.php">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
                     <li class="nav-item d-flex align-items-center ms-lg-3">
                         <?php if (isset($_SESSION['user'])): ?>
@@ -99,22 +104,31 @@ session_start();
     </section>
 
     <section id="iletisim" class="mb-5">
-        <h2 class="text-center mb-4">Medya ve İletişim</h2>
-        <div class="row">
-            <div class="col-md-8">
-                <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden bg-light border">
-                    <iframe src="" title="Tanıtım Videosu" allowfullscreen></iframe>
+        <h2 class="text-center mb-4 text-primary fw-bold">Medya ve İletişim</h2>
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <h5 class="fw-bold mb-3">Hobi ve İlgi Alanlarımdan Kareler</h5>
+                <div class="row g-2"> <div class="col-md-4">
+                        <img src="fotoğraflar/Tenis.jpeg" class="hobi-img img-fluid shadow-sm" alt="Tenis">
                     </div>
-                <p class="text-muted mt-2 small text-center">Medya Videosunu buraya ekleueceğim.</p>
+                    <div class="col-md-4">
+                        <img src="fotoğraflar/yazılım.png" class="hobi-img img-fluid shadow-sm" alt="Yazılım">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="fotoğraflar/SEIS_IT.jpeg" class="hobi-img img-fluid shadow-sm" alt="SEIS Kulübü">
+                    </div>
+                </div>
+                <p class="text-muted mt-2 small">Hobilerim ve teknik ilgi alanlarımdan bazı kesitler.</p>
             </div>
-            <div class="col-md-4 d-flex flex-column justify-content-center">
-                <div class="card border-0 bg-transparent">
-                    <div class="card-body">
-                        <h5 class="fw-bold">Bağlantılarım</h5>
-                        <p>Projelerimi takip etmek veya bana ulaşmak için aşağıdaki linkleri kullanabilirsiniz.</p>
+
+            <div class="col-lg-4">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h5 class="fw-bold border-bottom pb-2 mb-3">Bağlantılarım</h5>
+                        <p class="small text-muted mb-4">Projelerimi takip etmek veya bana ulaşmak için aşağıdaki linkleri kullanabilirsiniz.</p>
                         <div class="d-grid gap-2">
-                            <a href="https://github.com/TunaKaradenizz" class="btn btn-dark" target="_blank">GitHub Profilim</a>
-                            <a href="mailto:tunakrdnz06@gmail.com" class="btn btn-primary">E-posta Gönder</a>
+                            <a href="https://github.com/TunaKaradenizz" class="btn btn-dark fw-bold py-2" target="_blank">GitHub Profilim</a>
+                            <a href="mailto:tunakrdnz06@gmail.com" class="btn btn-primary fw-bold py-2">E-posta Gönder</a>
                         </div>
                     </div>
                 </div>

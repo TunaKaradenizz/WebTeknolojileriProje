@@ -7,18 +7,23 @@
     <title>Mirasımız | Konuralp Antik Kenti</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="index.php">Tuna Karadeniz</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.php">Hakkında</a></li>
                         <li class="nav-item"><a class="nav-link" href="ozgecmis.php">Özgeçmiş</a></li>
                         <li class="nav-item"><a class="nav-link" href="sehrim.php">Şehrim</a></li>
                         <li class="nav-item"><a class="nav-link active" href="mirasimiz.php">Mirasımız</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ilgi_alanlarim.php">İlgi Alanlarım</a></li>
                         <li class="nav-item"><a class="nav-link" href="iletisim.php">İletişim</a></li>
                         <li class="nav-item d-flex align-items-center ms-lg-3">
                             <?php if (isset($_SESSION['user'])): ?>
@@ -58,10 +63,29 @@
                     </div>
                 </div>
 
-                <div class="mt-5 p-4 border rounded shadow-sm bg-white">
-                    <h3 class="fw-bold mb-4">Neden Burası Önemli?</h3>
-                    <p>Konuralp, sadece Düzce'nin değil, tüm bölgenin tarihsel hafızasıdır. Roma döneminde bir eyalet merkezi olan bu kent, tiyatrosu, su kemerleri, surları ve müzesinde sergilenen paha biçilemez Tyche heykeli ile Türkiye'nin en değerli arkeolojik noktalarından biridir.</p>
-                </div>
+                <section id="konuralp-detay" class="mt-5 mb-5 p-4 bg-light rounded shadow-sm">
+                    <h3 class="fw-bold mb-4 border-bottom pb-2 text-primary">Konuralp Antik Kenti Genel Bilgiler</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 class="h6 fw-bold">🏛️ Önemli Yapılar</h4>
+                            <ul class="list-group list-group-flush bg-transparent">
+                                <li class="list-group-item bg-transparent border-0 ps-0">• 10.000 Kişilik Antik Tiyatro</li>
+                                <li class="list-group-item bg-transparent border-0 ps-0">• Roma Köprüsü</li>
+                                <li class="list-group-item bg-transparent border-0 ps-0">• Atlı Kapı ve Surlar</li>
+                                <li class="list-group-item bg-transparent border-0 ps-0">• Su Kemerleri (Kemerkasım)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="h6 fw-bold">🕒 Tarihsel Bilgi</h4>
+                            <p class="small text-muted">
+                                Bölge tarih boyunca **Bitinya**, **Roma**, **Bizans** ve son olarak **Osmanlı** hakimiyetinde kalmıştır. İsmini, Osman Gazi'nin silah arkadaşı olan **Konur Alp** Bey'den almıştır.
+                            </p>
+                            <div class="alert alert-info py-2 small">
+                                <i class="bi bi-info-circle me-2"></i>Bugün Prusias ad Hypium Antik Kenti, Batı Karadeniz'in "Efes'i" olarak adlandırılmaktadır.
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>

@@ -34,4 +34,4 @@ Hocanın istediği 10 farklı günde push kuralına uymak için şöyle bir plan
 
 * ~~**Gün 10:**Görev günleri olarak son görev 1 gün ertelendi bugün çeşitli düzenlemeler ve küçük değişiklerle geçti~~ 
 
-* **Gün 11:** Bir API servisinden (Film, Spor vb.) veri çekip sitede dinamik olarak gösterme işlemi.
+* ~~**Gün 11:** Bir API servisinden (Film, Spor vb.) veri çekip sitede dinamik olarak gösterme işlemi.~~

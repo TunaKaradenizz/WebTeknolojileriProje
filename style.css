@@ -107,3 +107,33 @@ footer {
     font-size: 0.75rem;
     letter-spacing: 0.5px;
 }
+.hobi-img {
+    width: 100% !important; /* Sütun genişliğine zorla */
+    height: 250px !important; /* Hepsini 250px yapalım */
+    object-fit: cover; /* Resmi basmadan, kutuya sığacak şekilde kırp */
+    border-radius: 10px;
+}
+/* İlgi Alanlarım Sayfası Özel Stilleri */
+.movie-card { 
+    transition: transform 0.3s; 
+    border: none; 
+}
+
+.movie-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+}
+
+.movie-img { 
+    height: 350px; 
+    object-fit: cover; 
+}
+
+/* Spinner (Yükleniyor) hizalaması */
+#yukleniyor {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

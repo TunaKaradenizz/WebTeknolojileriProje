@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-light">
 
@@ -15,12 +16,16 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="index.php">Tuna Karadeniz</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.php">Hakkında</a></li>
                         <li class="nav-item"><a class="nav-link" href="ozgecmis.php">Özgeçmiş</a></li>
                         <li class="nav-item"><a class="nav-link" href="sehrim.php">Şehrim</a></li>
                         <li class="nav-item"><a class="nav-link" href="mirasimiz.php">Mirasımız</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ilgi_alanlarim.php">İlgi Alanlarım</a></li>
                         <li class="nav-item"><a class="nav-link active" href="iletisim.php">İletişim</a></li>
                         <li class="nav-item d-flex align-items-center ms-lg-3">
                             <?php if (isset($_SESSION['user'])): ?>
@@ -206,8 +211,8 @@
         </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3 mt-auto">
-        <p class="mb-0">&copy; 2026 Tuna Karadeniz - Tüm Hakları Saklıdır.</p>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2026 Tuna Karadeniz | İletişim Sayfası</p>
     </footer>
 
     <script>
